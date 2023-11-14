@@ -1,0 +1,9 @@
+services:
+  web:
+    build: .
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./src:/home/node/app/src
+    image: node:18-alpine3.17
+    command: node /home/node/app/src/index.ts
